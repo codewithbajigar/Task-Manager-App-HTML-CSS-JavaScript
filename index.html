@@ -1,0 +1,59 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <h1>Task Manager</h1>
+            <p>Welcome to my too do list </p>
+        </header>
+
+        <form id="taskForm">
+            <input type="hidden" id="editId">
+
+            <label for="title">Task Title</label>
+            <input
+                type="text"
+                id="title"
+                placeholder="Enter task title"
+                maxlength="100"
+                required
+            >
+
+            <label for="description">Task Description</label>
+            <textarea
+                id="description"
+                placeholder="Describe your task..."
+                rows="4"
+                maxlength="1000"
+                required
+            ></textarea>
+
+            <button type="submit" id="submitBtn">+ Add Task</button>
+            <button type="button" id="cancelBtn" hidden>
+                Cancel Edit
+            </button>
+        </form>
+
+        <section class="task-section">
+            <div class="task-heading">
+                <h2>Your Tasks</h2>
+                <span id="taskCount">0 tasks</span>
+            </div>
+
+            <div id="taskList"></div>
+
+            <p id="emptyMessage">No tasks yet. Add your first task!</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
